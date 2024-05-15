@@ -8,7 +8,7 @@
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "$1\nconsole.log('Lalonde ${TM_CURRENT_LINE/^.*?([^\\s]+)\\s*$/$1/} [${TM_LINE_NUMBER}]', ${TM_CURRENT_LINE/^.*?([^\\s]+)\\s*$/$1/})\n"
+            "snippet": "$1\nconsole.log('Lalonde ${TM_CURRENT_LINE/^.*?([^\\s]+)\\s*$/$1/}', ${TM_CURRENT_LINE/^.*?([^\\s]+)\\s*$/$1/})\n"
           }
         },
         {
