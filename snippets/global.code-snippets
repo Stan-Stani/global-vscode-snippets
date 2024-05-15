@@ -21,5 +21,14 @@
 		"body": [
 			" waitFor(async () => {  $TM_SELECTED_TEXT })"
 		]
+	},
+	"consoleLogLine": {
+		"prefix": "clg",
+		"body": [
+			"${TM_CURRENT_LINE/^.*?([^\\s]+)\\s*$/$1/}",
+			"$BLOCK_COMMENT_START console.log('=== ${TM_CURRENT_LINE/^.*?([^\\s]+)\\s*$/$1/} ${TM_FILENAME} [${TM_LINE_NUMBER}] ===', ${TM_CURRENT_LINE/^.*?([^\\s]+)\\s*$/$1/}); $BLOCK_COMMENT_END"
+		],
+		"command": "cursorHomeSelect",
+		"description": "Console log line with variable"
 	}
 }

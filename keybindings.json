@@ -1,0 +1,49 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "shift+ctrl+;",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        {
+          "command": "editor.action.insertSnippet",
+          "args": {
+            "snippet": "$1\nconsole.log('Lalonde ${TM_CURRENT_LINE/^.*?([^\\s]+)\\s*$/$1/} [${TM_LINE_NUMBER}]', ${TM_CURRENT_LINE/^.*?([^\\s]+)\\s*$/$1/})\n"
+          }
+        },
+        {
+          "command": "cursorHomeSelect"
+        },
+        { "command": "deleteLeft" },
+        { "command": "prettier.forceFormatDocument" }
+      ]
+    },
+    "when": "editorTextFocus && (editorLangId == 'typescript' || editorLangId == 'javascript' || editorLangId == 'typescriptreact' || editorLangId == 'javascriptreact')"
+  },
+  {
+    "key": "shift+ctrl+l",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "snippet": "console.log(\"Lalonde\", ${0})"
+    },
+    "when": "editorTextFocus && (editorLangId == 'typescript' || editorLangId == 'javascript' || editorLangId == 'typescriptreact' || editorLangId == 'javascriptreact')"
+  },
+  {
+    "key": "ctrl+'",
+    "command": "runCommands",
+    "when": "editorTextFocus",
+    "args": {
+      "commands": [
+        "workbench.action.files.save",
+        "workbench.action.closeActiveEditor",
+        "workbench.action.terminal.toggleTerminal",
+        "workbench.action.terminal.scrollDown"
+      ]
+    }
+  },
+  {
+    "key": "capslock a",
+    "command": "editor.action.peekDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  }
+]
