@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# Except the 'snippets' directory and its subdirectories
+!/snippets/
+!/snippets/**
+
+# And except these
+!/keybindings.json
+!.gitignore
